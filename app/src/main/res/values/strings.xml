@@ -5,4 +5,5 @@
     <string name="top">Top News</string>
     <string name="get">Get all News</string>
     <string name="sources">Sources of News</string>
+    <string name="all">All Searched</string>
 </resources>

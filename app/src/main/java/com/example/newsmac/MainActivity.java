@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,9 +41,36 @@ public class MainActivity extends AppCompatActivity {
         mSearchNews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String search = mSearchNews.getText().toString();
-                Log.d(TAG, search);
+                Toast.makeText(MainActivity.this,"Searching News", Toast.LENGTH_LONG).show();
+                String search = mLocationEditText.getText().toString();
+                //Log.d(TAG, search);
                 Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                intent.putExtra("search",search);
+                startActivity(intent);
+            }
+        });
+
+        mTopTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Top News", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, TopActivity.class);
+                startActivity(intent);
+            }
+        });
+        mSourceTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Getting Sources",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, SourcesActivity.class);
+                startActivity(intent);
+            }
+        });
+        mGetTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Getting all News",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, GetActivity.class);
                 startActivity(intent);
             }
         });
