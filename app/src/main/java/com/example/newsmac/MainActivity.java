@@ -1,8 +1,11 @@
 package com.example.newsmac;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,6 +14,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.textView) TextView mTextView;
     @BindView(R.id.getTextView) TextView mGetTextView;
     @BindView(R.id.sourceTextView) TextView mSourceTextView;
@@ -32,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
         mTopTextView.setTypeface(champagneFont);
         mLocationEditText.setTypeface(champagneFont);
         //mSearchNews.setTypeface(champagneFont);
+
+        mSearchNews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String search = mSearchNews.getText().toString();
+                Log.d(TAG, search);
+                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
