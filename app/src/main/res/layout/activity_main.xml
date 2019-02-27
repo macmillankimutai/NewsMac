@@ -30,7 +30,7 @@
         android:id="@+id/topTextView"
         android:textColor="@color/colorTextIcons"
         android:padding="5dp"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         android:id="@+id/getTextView"
         android:textColor="@color/colorTextIcons"
         android:padding="5dp"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:layout_centerHorizontal="true"/>
     <TextView
         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
         android:id="@+id/sourceTextView"
         android:textColor="@color/colorTextIcons"
         android:padding="5dp"
-        android:textSize="30sp"
+        android:textSize="36sp"
         android:layout_centerHorizontal="true"/>
     <EditText
         android:layout_width="wrap_content"
