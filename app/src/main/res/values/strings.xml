@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewsMac</string>
+    <string name="search">Search News</string>
+    <string name="mac">MacNews</string>
+    <string name="top">Top News</string>
+    <string name="get">Get all News</string>
+    <string name="sources">Sources of News</string>
+</resources>
