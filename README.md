@@ -1,11 +1,18 @@
-#MacNews Application
- This is an application that retrieves data from an api.You can receive notification on your phone on
- any news alert.
-##Introduction
-In the application the user will see a search button where the user will see where he can input any news
-information he wants to search, also they can get top searches and also can retrieve all news at random.
-##Pre-requisites
-Android SDK 28
-Android Build Tools v28.0.0
-Android Support Repositories
-##Getting Started
+# {MacNews}
+#### {It retrieves information from a news api}, {Version 1.0.1}
+#### By **{MacMillan Kimutai}**
+## Description
+{This is an application that the user can search any news information they want,it can also display the top news and also show the list of sources the news information came from.}
+## Pre-requisites
+* Android SDK v28
+* Android Build Tools v28.0.0
+* Android Support Repository
+## Known Bugs
+{If there is any issue in my application that needs to be fixed contact me in my github page. }
+## Technologies Used
+{I used java to write the application}
+## Support 
+{Google+ Community}
+### License
+*{ Licensed to ASF under one contributor license agreements}*
+Copyright (c) {2019} **{The Android Open Source Project, Inc}**
