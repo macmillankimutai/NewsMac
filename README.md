@@ -12,7 +12,7 @@ If there is any issue in my application that needs to be fixed contact me in my 
 ## Technologies Used
 I used java to write the application
 ## Support 
-{Google+ Community}
+Google+ Community
 ### License
-*{ Licensed to ASF under one contributor license agreements}*
-Copyright (c) {2019} **{The Android Open Source Project, Inc}**
+*Licensed to ASF under one contributor license agreements*
+Copyright (c) 2019 **The Android Open Source Project, Inc**
