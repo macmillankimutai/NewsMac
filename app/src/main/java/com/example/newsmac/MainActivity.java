@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        Typeface champaneFont = Typeface.createFromAsset(getAssets(), "fonts/cac_champagne.ttf");
-        mTextView.setTypeface(champaneFont);
-        mGetTextView.setTypeface(champaneFont);
-        mSourceTextView.setTypeface(champaneFont);
-        mTopTextView.setTypeface(champaneFont);
-        mLocationEditText.setTypeface(champaneFont);
+        Typeface champagneFont = Typeface.createFromAsset(getAssets(), "fonts/cac_champagne.ttf");
+        mTextView.setTypeface(champagneFont);
+        mGetTextView.setTypeface(champagneFont);
+        mSourceTextView.setTypeface(champagneFont);
+        mTopTextView.setTypeface(champagneFont);
+        mLocationEditText.setTypeface(champagneFont);
         //mSearchNews.setTypeface(champagneFont);
 
         mSearchNews.setOnClickListener(new View.OnClickListener() {
