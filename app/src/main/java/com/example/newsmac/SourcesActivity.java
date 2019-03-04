@@ -9,7 +9,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SourcesActivity extends AppCompatActivity {
-    public String[] top = new String[] {"ABC news","Aftenposten","Al jazeera English","ANSA","Argaam","Ary News"};
+    public String[] top = new String[] {"ABC news","Aftenposten","Al jazeera English","ANSA","Argaam","Ary News","City News"};
     @BindView(R.id.sourceListView) ListView mSourceListView;
 
     @Override
