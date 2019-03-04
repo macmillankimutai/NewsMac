@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mSourceTextView.setTypeface(champagneFont);
         mTopTextView.setTypeface(champagneFont);
         mLocationEditText.setTypeface(champagneFont);
-        mSearchNews.setTypeface(champagneFont);
+        //mSearchNews.setTypeface(champagneFont);
 
         mSearchNews.setOnClickListener(new View.OnClickListener() {
             @Override
