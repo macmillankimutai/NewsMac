@@ -9,7 +9,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class GetActivity extends AppCompatActivity {
-    private String[] everything = new String[] {"TechCrunch","The Verge","Business Insider","Gizmodo","Mashable","EthereumWorld"};
+    private String[] everything = new String[] {"TechCrunch","The Verge","Business Insider","Gizmodo","Mashable","EthereumWorld","Crypto World"};
 
     @BindView(R.id.getListView) ListView mGetListView;
 
