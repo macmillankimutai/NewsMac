@@ -9,7 +9,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class TopActivity extends AppCompatActivity {
-    private  String[] top = new String[] {"Texas LawMaker","Syracuse vs North Carolina","Cara anna & Khaled","USA today","Chicago tribune","Aaron Farling"};
+    private  String[] top = new String[] {"Texas LawMaker","Syracuse vs North Carolina","Cara anna & Khaled","USA today","Chicago tribune","Aaron Farling","Trade War"};
     @BindView(R.id.topListView) ListView mTopListView;
 
     @Override
