@@ -17,4 +17,4 @@ If there is any issue in my application that needs to be fixed contact me in my 
 Google+ Community
 ### License
 *Licensed to ASF under one contributor license agreements*
-Copyright (c) 2019 **The Android Open Source Project, Inc**
+Copyright (c) 2019 **The Android Open Source Project Inc**
