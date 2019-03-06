@@ -6,4 +6,7 @@
     <string name="get">Get all News</string>
     <string name="sources">Sources of News</string>
     <string name="all">All Searched</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="source">Source</string>
 </resources>
