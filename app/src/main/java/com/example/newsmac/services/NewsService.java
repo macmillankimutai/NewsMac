@@ -43,13 +43,9 @@ public class NewsService {
             JSONArray articlesJSON = newsJSON.getJSONArray("articles");
             if(response.isSuccessful()){
                 for (int i = 0; i < articlesJSON.length(); i++){
-                    JSONObject newJSON = articlesJSON.getJSONObject(i);
+                   JSONObject newJSON = articlesJSON.getJSONObject(i);
 
                     ArrayList<String> source = new ArrayList<>();
-                    JSONArray sourceJSON = newJSON.getJSONArray("source");
-                    for (int y = 0; y < sourceJSON.length(); y++) {
-                        source.add(sourceJSON.getJSONObject(y).getString("name"));
-                    }
                      String author = newJSON.getString("author");
                      String title = newJSON.getString("title");
                      String description = newJSON.getString("description");

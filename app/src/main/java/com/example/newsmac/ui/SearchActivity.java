@@ -1,13 +1,13 @@
-package com.example.newsmac;
+package com.example.newsmac.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
+import com.example.newsmac.R;
+import com.example.newsmac.adapters.NewsListAdapter;
 import com.example.newsmac.models.News;
 import com.example.newsmac.services.NewsService;
 
@@ -22,8 +22,8 @@ import okhttp3.Response;
 
 public class SearchActivity extends AppCompatActivity {
     public static final String TAG = SearchActivity.class.getSimpleName();
-    @BindView(R.id.locationTextView) TextView mLocationTextView;
-    @BindView(R.id.listView) ListView mListView;
+    @BindView(R.id.recyclerView) RecyclerView mRecylerView;
+    private NewsListAdapter mAdapter;
 
     public ArrayList<News> news = new ArrayList<>();
 
@@ -36,7 +36,6 @@ public class SearchActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String search = intent.getStringExtra("search");
 
-        mLocationTextView.setText("All searched news:" + search);
         getSearch(search);
     }
     private void getSearch(String search){
@@ -52,22 +51,11 @@ public class SearchActivity extends AppCompatActivity {
                 SearchActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        String[] newNames = new String[news.size()];
-                        for(int i = 0; i < newNames.length; i++){
-
-                            newNames[i] = news.get(i).getAuthor();
-                        }
-                        ArrayAdapter adapter = new ArrayAdapter(SearchActivity.this, android.R.layout.simple_list_item_1, newNames);
-                        mListView.setAdapter(adapter);
-                        for (News news :news){
-                            Log.d(TAG, "Source:" + news.getSource());
-                            Log.d(TAG, "Author:" + news.getAuthor());
-                            Log.d(TAG, "Title:" + news.getTitle());
-                            Log.d(TAG, "Description:" + news.getDescription());
-                            Log.d(TAG, "Url" + news.getUrl());
-                            Log.d(TAG,"PublishedAt:" + news.getPublishedAt());
-                            Log.d(TAG, "Content:" + news.getContent());
-                        }
+                        mAdapter = new NewsListAdapter(getApplicationContext(), news);
+                        mRecylerView.setAdapter(mAdapter);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(SearchActivity.this);
+                        mRecylerView.setLayoutManager(layoutManager);
+                        mRecylerView.setHasFixedSize(true);
                     }
                 });
             }

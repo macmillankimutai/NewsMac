@@ -1,24 +1,26 @@
-package com.example.newsmac;
+package com.example.newsmac.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.newsmac.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SourcesActivity extends AppCompatActivity {
-    public String[] top = new String[] {"ABC news","Aftenposten","Al jazeera English","ANSA","Argaam","Ary News","City News"};
-    @BindView(R.id.sourceListView) ListView mSourceListView;
+public class TopActivity extends AppCompatActivity {
+    private  String[] top = new String[] {"Texas LawMaker","Syracuse vs North Carolina","Cara anna & Khaled","USA today","Chicago tribune","Aaron Farling","Trade War"};
+    @BindView(R.id.topListView) ListView mTopListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sources);
+        setContentView(R.layout.activity_top);
         ButterKnife.bind(this);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, top);
-        mSourceListView.setAdapter(adapter);
+        mTopListView.setAdapter(adapter);
     }
 }

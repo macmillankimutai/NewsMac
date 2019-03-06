@@ -1,9 +1,11 @@
-package com.example.newsmac;
+package com.example.newsmac.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.newsmac.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
