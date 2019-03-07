@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 public class NewsDetailFragment extends Fragment implements View.OnClickListener {
     @BindView(R.id.titleNameTextView) TextView mTitle;
     @BindView(R.id.authorTextView) TextView mAuthor;
-    @BindView(R.id.contentTextView) TextView mContent;
+    @BindView(R.id.descriptionTextView) TextView mDescribe;
     @BindView(R.id.saveNewsButton) Button mSave;
     @BindView(R.id.publishTextView) TextView mPublish;
 
@@ -51,7 +51,7 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
 
         mTitle.setText(mNews.getTitle());
         mAuthor.setText(mNews.getAuthor());
-        mContent.setText(mNews.getContent());
+        mDescribe.setText(mNews.getDescription());
 
         mPublish.setOnClickListener(this);
 
