@@ -9,10 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.newsmac.R;
 import com.example.newsmac.models.News;
+import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
@@ -28,6 +30,7 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
     @BindView(R.id.descriptionTextView) TextView mDescribe;
     @BindView(R.id.saveNewsButton) Button mSave;
     @BindView(R.id.publishTextView) TextView mPublish;
+   // @BindView(R.id.newsImageView) ImageView mImage;
 
     private News mNews;
 
@@ -52,8 +55,10 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
         mTitle.setText(mNews.getTitle());
         mAuthor.setText(mNews.getAuthor());
         mDescribe.setText(mNews.getDescription());
+        //Picasso.get().load(mNews.getImageUrl()).into(mImage);
 
         mPublish.setOnClickListener(this);
+
 
         return view;
     }
