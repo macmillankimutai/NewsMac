@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
  * A simple {@link Fragment} subclass.
  */
 public class NewsDetailFragment extends Fragment {
-    @BindView(R.id.searchNameTextView) TextView mTitle;
+    @BindView(R.id.titleNameTextView) TextView mTitle;
     @BindView(R.id.authorTextView) TextView mAuthor;
     @BindView(R.id.contentTextView) TextView mContent;
     @BindView(R.id.saveNewsButton) Button mSave;
@@ -42,8 +42,7 @@ public class NewsDetailFragment extends Fragment {
         mNews = Parcels.unwrap(getArguments().getParcelable("news"));
     }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_news_detail,container,false);
         ButterKnife.bind(this, view);
 

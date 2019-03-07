@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.newsmac.R;
 import com.example.newsmac.models.News;
+import com.example.newsmac.ui.NewsDetailActivity;
 import com.example.newsmac.ui.NewsDetailFragment;
 
 import org.parceler.Parcels;
@@ -57,9 +58,9 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
             itemView.setOnClickListener(this);
         }
         @Override
-        public void onClick(View view){
+        public void onClick(View v){
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, NewsDetailFragment.class);
+            Intent intent = new Intent(mContext, NewsDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("news", Parcels.wrap(mNews));
             mContext.startActivity(intent);

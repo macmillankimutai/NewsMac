@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"Searching News", Toast.LENGTH_LONG).show();
                 String search = mLocationEditText.getText().toString();
                 //Log.d(TAG, search);
-                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                Intent intent = new Intent(MainActivity.this, SearchListActivity.class);
                 intent.putExtra("search",search);
                 startActivity(intent);
             }

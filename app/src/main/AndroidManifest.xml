@@ -27,7 +27,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity"></meta-data>
         </activity>
-        <activity android:name=".ui.SearchActivity">
+        <activity android:name=".ui.SearchListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity"></meta-data>

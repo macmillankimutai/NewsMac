@@ -20,8 +20,8 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class SearchActivity extends AppCompatActivity {
-    public static final String TAG = SearchActivity.class.getSimpleName();
+public class SearchListActivity extends AppCompatActivity {
+    public static final String TAG = SearchListActivity.class.getSimpleName();
     @BindView(R.id.recyclerView) RecyclerView mRecylerView;
     private NewsListAdapter mAdapter;
 
@@ -48,12 +48,12 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 news = newsService.processResults(response);
-                SearchActivity.this.runOnUiThread(new Runnable() {
+                SearchListActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         mAdapter = new NewsListAdapter(getApplicationContext(), news);
                         mRecylerView.setAdapter(mAdapter);
-                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(SearchActivity.this);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(SearchListActivity.this);
                         mRecylerView.setLayoutManager(layoutManager);
                         mRecylerView.setHasFixedSize(true);
                     }
