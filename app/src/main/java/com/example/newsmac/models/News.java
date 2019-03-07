@@ -13,11 +13,12 @@ public class News {
     private String mUrl;
     private String mPublishedAt;
     private String mContent;
+    private String mImageUrl;
 
     public News() {}
 
     public News(ArrayList<String> source, String author, String title, String description,
-               String url, String publishedAt, String content){
+               String url, String publishedAt, String content,String imageUrl){
         this.mSource = source;
         this.mAuthor = author;
         this.mTitle = title;
@@ -25,6 +26,7 @@ public class News {
         this.mUrl = url;
         this.mPublishedAt = publishedAt;
         this.mContent = content;
+        this.mImageUrl = imageUrl;
     }
     public ArrayList<String> getSource(){
         return mSource;
@@ -47,4 +49,5 @@ public class News {
     public String getContent(){
         return mContent;
     }
+    public String getImageUrl(){ return  mImageUrl; }
 }

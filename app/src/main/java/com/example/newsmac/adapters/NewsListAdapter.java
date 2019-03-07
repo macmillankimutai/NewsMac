@@ -13,6 +13,7 @@ import com.example.newsmac.R;
 import com.example.newsmac.models.News;
 import com.example.newsmac.ui.NewsDetailActivity;
 import com.example.newsmac.ui.NewsDetailFragment;
+import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
@@ -46,8 +47,8 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
 
     public class  NewsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.newsNameTextView) TextView mNewsNameTextView;
-        @BindView(R.id.descriptionTextView) TextView mDescription;
         @BindView(R.id.authorTextView) TextView mAuthorTextView;
+       // @BindView(R.id.newsImageView) ImageView mNewsImage;
 
         private Context mContext;
 
@@ -66,8 +67,8 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
             mContext.startActivity(intent);
         }
         public void bindNews(News news) {
+           // Picasso.get().load(news.getImageUrl()).into(mNewsImage);
             mNewsNameTextView.setText(news.getTitle());
-            mDescription.setText(news.getDescription());
             mAuthorTextView.setText(news.getAuthor());
         }
     }
