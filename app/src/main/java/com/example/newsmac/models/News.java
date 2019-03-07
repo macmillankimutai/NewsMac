@@ -1,7 +1,10 @@
 package com.example.newsmac.models;
 
+import org.parceler.Parcel;
+
 import java.util.ArrayList;
 
+@Parcel
 public class News {
     private ArrayList<String> mSource;
     private String mAuthor;
@@ -10,6 +13,8 @@ public class News {
     private String mUrl;
     private String mPublishedAt;
     private String mContent;
+
+    public News() {}
 
     public News(ArrayList<String> source, String author, String title, String description,
                String url, String publishedAt, String content){

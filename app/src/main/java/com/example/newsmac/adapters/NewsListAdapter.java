@@ -1,6 +1,7 @@
 package com.example.newsmac.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,9 @@ import android.widget.TextView;
 
 import com.example.newsmac.R;
 import com.example.newsmac.models.News;
+import com.example.newsmac.ui.NewsDetailFragment;
+
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
@@ -39,7 +43,7 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
         return mNews.size();
     }
 
-    public class  NewsViewHolder extends RecyclerView.ViewHolder {
+    public class  NewsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @BindView(R.id.newsNameTextView) TextView mNewsNameTextView;
         @BindView(R.id.descriptionTextView) TextView mDescription;
         @BindView(R.id.authorTextView) TextView mAuthorTextView;
@@ -50,6 +54,15 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsVi
             super(itemView);
             ButterKnife.bind(this, itemView);
             mContext = itemView.getContext();
+            itemView.setOnClickListener(this);
+        }
+        @Override
+        public void onClick(View view){
+            int itemPosition = getLayoutPosition();
+            Intent intent = new Intent(mContext, NewsDetailFragment.class);
+            intent.putExtra("position", itemPosition);
+            intent.putExtra("news", Parcels.wrap(mNews));
+            mContext.startActivity(intent);
         }
         public void bindNews(News news) {
             mNewsNameTextView.setText(news.getTitle());
