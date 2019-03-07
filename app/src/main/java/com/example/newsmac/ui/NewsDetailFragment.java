@@ -1,6 +1,8 @@
 package com.example.newsmac.ui;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,11 +22,12 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class NewsDetailFragment extends Fragment {
+public class NewsDetailFragment extends Fragment implements View.OnClickListener {
     @BindView(R.id.titleNameTextView) TextView mTitle;
     @BindView(R.id.authorTextView) TextView mAuthor;
     @BindView(R.id.contentTextView) TextView mContent;
     @BindView(R.id.saveNewsButton) Button mSave;
+    @BindView(R.id.publishTextView) TextView mPublish;
 
     private News mNews;
 
@@ -50,7 +53,16 @@ public class NewsDetailFragment extends Fragment {
         mAuthor.setText(mNews.getAuthor());
         mContent.setText(mNews.getContent());
 
+        mPublish.setOnClickListener(this);
+
         return view;
+    }
+    @Override
+    public void onClick(View v){
+        if (v == mPublish){
+            Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mNews.getUrl()));
+            startActivity(webIntent);
+        }
     }
 
 }
