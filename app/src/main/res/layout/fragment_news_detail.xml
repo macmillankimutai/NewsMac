@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/author"
                 android:id="@+id/authorTextView"
-                android:layout_below="@+id/searchNameTextView"
+                android:layout_below="@+id/titleNameTextView"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:textColor="@color/colorSecondaryText"
