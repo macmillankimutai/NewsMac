@@ -55,7 +55,10 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
         mTitle.setText(mNews.getTitle());
         mAuthor.setText(mNews.getAuthor());
         mDescribe.setText(mNews.getDescription());
-        //Picasso.get().load(mNews.getImageUrl()).into(mImage);
+
+       // Picasso.get()
+         //       .load(mNews.getImageUrl()).resize(600,200).centerCrop()
+           //     .into(mImage);
 
         mPublish.setOnClickListener(this);
 
