@@ -53,8 +53,10 @@ public class NewsService {
                      String publishedAt = newJSON.getString("publishedAt");
                      String content = newJSON.getString("content");
                      String imageUrl = newJSON.getString("urlToImage");
+                     String replaceString= imageUrl.replace("http","https");
 
-                     News newss =  new News(source, author, title, description, url, publishedAt,content,imageUrl);
+
+                     News newss =  new News(source, author, title, description, url, publishedAt,content,replaceString);
                              newses.add(newss);
                 }
             }

@@ -30,7 +30,7 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
     @BindView(R.id.descriptionTextView) TextView mDescribe;
     @BindView(R.id.saveNewsButton) Button mSave;
     @BindView(R.id.publishTextView) TextView mPublish;
-   // @BindView(R.id.newsImageView) ImageView mImage;
+  //  @BindView(R.id.newsImageView) ImageView mImage;
 
     private News mNews;
 
@@ -57,8 +57,7 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
         mDescribe.setText(mNews.getDescription());
 
        // Picasso.get()
-         //       .load(mNews.getImageUrl()).resize(600,200).centerCrop()
-           //     .into(mImage);
+         //      .load(mNews.getImageUrl()).fit().into(mImage);
 
         mPublish.setOnClickListener(this);
 

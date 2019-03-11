@@ -19,8 +19,8 @@
         <ImageView
             android:id="@+id/newsImageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/place"
+            android:layout_height="200dp"
+            android:src="@drawable/news"
             android:scaleType="centerCrop" />
 
         <TextView
