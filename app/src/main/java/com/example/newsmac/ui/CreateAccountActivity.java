@@ -2,6 +2,7 @@ package com.example.newsmac.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     @BindView(R.id.passwordEditText) EditText mPasswordEditText;
     @BindView(R.id.confirmPasswordEditText) EditText mConfirmPasswordEditText;
     @BindView(R.id.loginTextView) TextView mLoginTextView;
+    @BindView(R.id.createTextView) TextView mCreate;
 
     public static final String TAG = CreateAccountActivity.class.getSimpleName();
     private FirebaseAuth mAuth;
@@ -47,6 +49,15 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         mAuth = FirebaseAuth.getInstance();
         createAuthStateListener();
         createAuthProgressDialog();
+
+        Typeface champagneFont = Typeface.createFromAsset(getAssets(), "fonts/cac_champagne.ttf");
+        mLoginTextView.setTypeface(champagneFont);
+        mCreateUserButton.setTypeface(champagneFont);
+        mNameEditText.setTypeface(champagneFont);
+        mEmailEditText.setTypeface(champagneFont);
+        mConfirmPasswordEditText.setTypeface(champagneFont);
+        mPasswordEditText.setTypeface(champagneFont);
+        mCreate.setTypeface(champagneFont);
 
         mLoginTextView.setOnClickListener(this);
         mCreateUserButton.setOnClickListener(this);

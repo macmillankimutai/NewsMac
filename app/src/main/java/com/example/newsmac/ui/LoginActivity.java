@@ -2,6 +2,7 @@ package com.example.newsmac.ui;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @BindView(R.id.passwordLoginButton) Button mPasswordLoginButton;
     @BindView(R.id.emailEditText) EditText mEmailEditText;
     @BindView(R.id.passwordEditText) EditText mPasswordEditText;
+    @BindView(R.id.login) TextView mLogin;
 
     public static final String TAG = LoginActivity.class.getSimpleName();
     private FirebaseAuth mAuth;
@@ -39,6 +41,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        Typeface champagneFont = Typeface.createFromAsset(getAssets(), "fonts/cac_champagne.ttf");
+        mLogin.setTypeface(champagneFont);
+        mRegisterTextView.setTypeface(champagneFont);
+        mPasswordLoginButton.setTypeface(champagneFont);
+        mEmailEditText.setTypeface(champagneFont);
+        mPasswordEditText.setTypeface(champagneFont);
 
         createAuthProgressDialog();
 

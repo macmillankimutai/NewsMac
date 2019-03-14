@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.LoginActivity"
-    android:background="#000000">
+    android:background="#673AB7">
 
     <LinearLayout
         android:orientation="vertical"
@@ -50,8 +50,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:textSize="18sp"
             android:text="@string/login"
-            android:background="@color/colorAccent"
+            android:background="#9C27B0"
             android:layout_marginTop="15dp"
             android:textColor="@color/colorTextIcons" />
 
@@ -61,7 +62,7 @@
             android:layout_marginTop="20dp"
             android:textColor="@color/colorTextIcons"
             android:textStyle="bold"
-            android:textSize="15sp"
+            android:textSize="25sp"
             android:text="@string/dont"
             android:id="@+id/registerTextView"
             android:layout_gravity="center_horizontal" />
@@ -72,8 +73,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/log"
-        android:textColor="@color/colorPrimaryLight"
-        android:textSize="30dp"
+        android:textColor="@color/colorTextIcons"
+        android:textSize="60sp"
+        android:id="@+id/login"
         android:textStyle="bold"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true" />
