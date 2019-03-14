@@ -11,9 +11,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.newsmac.Constants;
 import com.example.newsmac.R;
 import com.example.newsmac.models.News;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -60,6 +64,7 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
          //      .load(mNews.getImageUrl()).fit().into(mImage);
 
         mPublish.setOnClickListener(this);
+        mSave.setOnClickListener(this);
 
 
         return view;
@@ -70,6 +75,12 @@ public class NewsDetailFragment extends Fragment implements View.OnClickListener
             Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mNews.getUrl()));
             startActivity(webIntent);
         }
+        if (v == mSave) {
+            DatabaseReference newsRef = FirebaseDatabase
+                    .getInstance()
+                    .getReference(Constants.FIREBASE_CHILD_NEWS);
+            newsRef.push().setValue(mNews);
+            Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
+        }
     }
-
 }

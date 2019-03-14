@@ -6,48 +6,48 @@ import java.util.ArrayList;
 
 @Parcel
 public class News {
-    private ArrayList<String> mSource;
-    private String mAuthor;
-    private String mTitle;
-    private String mDescription;
-    private String mUrl;
-    private String mPublishedAt;
-    private String mContent;
-    private String mImageUrl;
+    private ArrayList<String> source;
+    private String author;
+    private String title;
+    private String description;
+    private String url;
+    private String publishedAt;
+    private String content;
+    private String imageUrl;
 
     public News() {}
 
     public News(ArrayList<String> source, String author, String title, String description,
                String url, String publishedAt, String content,String imageUrl){
-        this.mSource = source;
-        this.mAuthor = author;
-        this.mTitle = title;
-        this.mDescription = description;
-        this.mUrl = url;
-        this.mPublishedAt = publishedAt;
-        this.mContent = content;
-        this.mImageUrl = imageUrl;
+        this.source = source;
+        this.author = author;
+        this.title = title;
+        this.description = description;
+        this.url = url;
+        this.publishedAt = publishedAt;
+        this.content = content;
+        this.imageUrl = imageUrl;
     }
     public ArrayList<String> getSource(){
-        return mSource;
+        return source;
     }
     public String getAuthor(){
-        return mAuthor;
+        return author;
     }
     public String getTitle(){
-        return mTitle;
+        return title;
     }
     public String getDescription(){
-        return mDescription;
+        return description;
     }
     public String getUrl(){
-        return mUrl;
+        return url;
     }
     public String getPublishedAt(){
-        return mPublishedAt;
+        return publishedAt;
     }
     public String getContent(){
-        return mContent;
+        return content;
     }
-    public String getImageUrl(){ return  mImageUrl; }
+    public String getImageUrl(){ return  imageUrl; }
 }

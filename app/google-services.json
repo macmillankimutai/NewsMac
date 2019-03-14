@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "986139347946",
+    "firebase_url": "https://macnews-3d568.firebaseio.com",
+    "project_id": "macnews-3d568",
+    "storage_bucket": "macnews-3d568.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986139347946:android:cf4961a4b46f75f0",
+        "android_client_info": {
+          "package_name": "com.example.newsmac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986139347946-s5hs3kbo84775boca64tlg2irnos9mgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHbxlRxItB0ue-9XKdQPCuXWGdBauY5jw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
