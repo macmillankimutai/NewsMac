@@ -22,8 +22,12 @@
         <activity
             android:name=".ui.CreateAccountActivity"
             android:theme="@style/NoApp"/>
-        <activity android:name=".SavedNewsListActivity" />
-        <activity android:name=".ui.NewsDetailActivity" />
+        <activity
+            android:name=".SavedNewsListActivity"
+            android:theme="@style/NoApp"/>
+        <activity
+            android:name=".ui.NewsDetailActivity"
+            android:theme="@style/NoApp"/>
         <activity android:name=".ui.SourcesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
