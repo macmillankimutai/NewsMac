@@ -57,7 +57,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_above="@+id/saveNewsButton"
-                android:background="#000000"
+                android:background="#673AB7"
                 android:paddingLeft="30dp"
                 android:paddingTop="20dp"
                 android:paddingRight="30dp">
@@ -91,7 +91,7 @@
                 android:text="@string/save"
                 android:id="@+id/saveNewsButton"
                 android:layout_alignParentBottom="true"
-                android:background="@color/colorAccent"
+                android:background="#9C27B0"
                 android:textColor="@color/colorTextIcons"
                 android:textSize="15sp" />
         </RelativeLayout>
