@@ -5,6 +5,7 @@
  of the time and also the sources it came from.
  The user can save the news they want to read later and also they can access the page
  where they can view their saved articles.
+ The user can login, log out and sign up in the news application.
 ## Installation
 * Clone my repository
 * Open the cloned repository using android studio.
@@ -13,6 +14,7 @@
 ## Pre requisites
 * Android studio
 * JDK
+* Firebase
 ## Support
 If you have any problems with installation and also if you have encountered with any 
 errors you can contact me. If their is any suggestions about how i can imporove my application
