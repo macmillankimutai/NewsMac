@@ -110,15 +110,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
               if(v == mSearchNews){
-                Toast.makeText(MainActivity.this,"Searching News", Toast.LENGTH_LONG).show();
+             //   Toast.makeText(MainActivity.this,"Searching News", Toast.LENGTH_LONG).show();
              //   String search = mLocationEditText.getText().toString();
              //   saveLocationToFirebase(search);
 
              //   if(!(search).equals("")) {
                //     addToSharedPreference(search);
                 //}
-                Intent intent = new Intent(MainActivity.this, SearchListActivity.class);
-                startActivity(intent);
+             //   Intent intent = new Intent(MainActivity.this, SearchListActivity.class);
+              //  startActivity(intent);
+                  startButtonAnimation(mSearchNews);
             }
             if(v == mSaved){
                // Intent intent = new Intent(MainActivity.this, SavedNewsListActivity.class);
@@ -161,6 +162,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
         }
+    public void startButtonAnimation(Button btn){
+        Animation shake = AnimationUtils.loadAnimation(this, R.anim.fade);
+        btn.setAnimation(shake);
+        btn.startAnimation(shake);
+
+        shake.setAnimationListener(new Animation.AnimationListener() {
+
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                startActivity(new Intent(getApplicationContext(), SearchListActivity.class));
+            }
+        });
+    }
         public void saveLocationToFirebase(String search){
         mSearchedNewsReference.push().setValue(search);
         }
