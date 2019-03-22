@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -104,6 +106,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mGetTextView.setOnClickListener(this);
         mSourceTextView.setOnClickListener(this);
     }
+    public void move(View view){
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
+        mGetTextView.startAnimation(animation);
+    }
             @Override
             public void onClick(View v) {
               if(v == mSearchNews){
@@ -118,8 +124,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
             if(v == mSaved){
-                Intent intent = new Intent(MainActivity.this, SavedNewsListActivity.class);
-                startActivity(intent);
+               // Intent intent = new Intent(MainActivity.this, SavedNewsListActivity.class);
+                //startActivity(intent);
+                startButtonAnimation(mSaved);
             }
             if(v == mTopTextView){
                 Intent intent = new Intent(MainActivity.this, TopActivity.class);
@@ -133,6 +140,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(MainActivity.this, SourcesActivity.class);
                 startActivity(intent);
             }
+        }
+        public void startButtonAnimation(Button btn){
+            Animation shake = AnimationUtils.loadAnimation(this, R.anim.zoom_in);
+            btn.setAnimation(shake);
+            btn.startAnimation(shake);
+
+            shake.setAnimationListener(new Animation.AnimationListener() {
+
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    startActivity(new Intent(getApplicationContext(), SavedNewsListActivity.class));
+                 //   overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+                }
+            });
         }
         public void saveLocationToFirebase(String search){
         mSearchedNewsReference.push().setValue(search);
