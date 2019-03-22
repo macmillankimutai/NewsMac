@@ -1,9 +1,7 @@
 package com.example.newsmac.ui;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
-import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,7 +13,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -107,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSourceTextView.setOnClickListener(this);
     }
     public void move(View view){
-        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
         mGetTextView.startAnimation(animation);
     }
             @Override
@@ -126,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(v == mSaved){
                // Intent intent = new Intent(MainActivity.this, SavedNewsListActivity.class);
                 //startActivity(intent);
-                startButtonAnimation(mSaved);
+                startButtoAnimation(mSaved);
             }
             if(v == mTopTextView){
                 Intent intent = new Intent(MainActivity.this, TopActivity.class);
@@ -141,8 +138,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         }
-        public void startButtonAnimation(Button btn){
-            Animation shake = AnimationUtils.loadAnimation(this, R.anim.zoom_in);
+        public void startButtoAnimation(Button btn){
+            Animation shake = AnimationUtils.loadAnimation(this, R.anim.rotate);
             btn.setAnimation(shake);
             btn.startAnimation(shake);
 
@@ -161,7 +158,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onAnimationEnd(Animation animation) {
                     startActivity(new Intent(getApplicationContext(), SavedNewsListActivity.class));
-                 //   overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 }
             });
         }
