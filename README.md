@@ -6,6 +6,7 @@
  The user can save the news they want to read later and also they can access the page
  where they can view their saved articles.
  The user can login, log out and sign up in the news application.
+ The application has two animations that are located at the search and also the saved button at the home page.
 ## Installation
 * Clone my repository
 * Open the cloned repository using android studio.
