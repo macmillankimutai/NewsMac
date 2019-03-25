@@ -100,10 +100,10 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         mAuthProgressDialog.dismiss();
                         if(task.isSuccessful()) {
-                            Log.d(TAG, "Authentication successful");
+                            Log.d(TAG, "SignUp successful");
                             createFirebaseUserProfile(task.getResult().getUser());
                         } else {
-                            Toast.makeText(CreateAccountActivity.this, "Authentication failed.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CreateAccountActivity.this, "SignUp failed.",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -142,10 +142,10 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
     private boolean isValidPassword(String password, String confirmPassword) {
         if (password.length() < 6) {
-            mPasswordEditText.setError("Please create a password containing at least 6 characters");
+            mPasswordEditText.setError("Password  must contain at least 6 characters");
             return false;
         } else if (!password.equals(confirmPassword)) {
-            mPasswordEditText.setError("Passwords do not match");
+            mPasswordEditText.setError("Passwords don't match");
             return false;
         }
         return true;
