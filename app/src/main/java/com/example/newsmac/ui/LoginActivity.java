@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password = mPasswordEditText.getText().toString().trim();
 
         if(email.equals("")) {
-            mEmailEditText.setError("Please enter your email");
+            mEmailEditText.setError("Enter your email");
             return;
         }
         if(password.equals("")){
@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void createAuthProgressDialog() {
         mAuthProgressDialog = new ProgressDialog(this);
         mAuthProgressDialog.setTitle("Loading...");
-        mAuthProgressDialog.setMessage("Authenticating with Firebase");
+        mAuthProgressDialog.setMessage("Logging In");
         mAuthProgressDialog.setCancelable(false);
     }
     @Override
